@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <script src="https://cdn.tailwindcss.com">
+ </script>
+ <title>Youssef_Portofolio</title>
+</head>
+<body class='m-auto'>
+ <style>
+  @keyframes appear{
+           from{
+               opacity: 0;
+               scale(0.5);
+              transform: translateY(-100px);               
+           }
+           to {
+               opacity: 1;
+               scale(1);
+               transform: translateX(0)
+           }
+       }
+       
+        section{
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%
+        }
+        .strip {
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, rgba(240, 240, 240, 0), black 40%,  60%, rgba(240, 240, 240, 0));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;      
+    }
+    section, #projects, #services {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+.hero-image{
+    width: 100%;
+    height: 50vh;
+    background: url('hero.jpg') center/cover no-repeat;
+    position: relative;
+    }
+.hero-image::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #a3790e;
+    bottom: 0;
+}
+.social-links i{
+    color: #7A7E7E;
+}
+i{
+    background: #F1F3F4;
+    border-radius: 50%;
+    padding: 15px;
+    color: #7A7E7E;
+}
+ </style>
+    <header>
+<nav class="w-full flex justify-between items-center shadow-lg z-50 fixed bg-white relative p-5">
+  <div class="duration-1000 bg-black m-2 p-1 z-50 humbergur-menu-parent rounded-md shadow-lg hover:bg-red-900">
+    <div class="h-1.5 bg-white shadow-sm w-12 m-2 humbergur-menu"></div>
+    <div class="h-1.5 bg-white shadow-sm w-12 m-2 humbergur-menu"></div>
+    <div class="h-1.5 bg-white shadow-sm w-12 m-2 humbergur-menu"></div>
+  </div>
+  <a href="#" class="text-black text-3xl font-semibold">Youssef Kabiri</a>
+
+  <ul class="hidden absolute top-full left-0 w-full bg-white flex flex-col jusftify-center items-center">
+    <li>
+      <a href="#about" class="text-gray-800 m-5 hover:text-black block p-2">Home</a>
+    </li>
+    <hr>
+    <li>
+      <a href="#about" class="text-gray-800 m-5 hover:text-black block p-2">About</a>
+    </li>
+    <hr>
+    <li>
+      <a href="#projects" class="text-gray-800 m-5 hover:text-black block p-2">Projects</a>
+    </li>
+    <hr>
+    <li>
+      <a href="#blogs" class="text-gray-800 m-5 hover:text-black block p-2">Blog</a>
+    </li>
+    <hr>
+    <li>
+      <a href="#faq" class="text-gray-800 m-5 hover:text-black block p-2">FAQ</a>
+    </li>
+    <hr>
+    <li>
+      <a href="#contact" class="text-gray-800 m-5 hover:text-black block p-2">Contact</a>
+    </li>
+    <hr>
+  </ul>
+</nav>
+</header>
+<div id="home" class="hero-image"></div>
+ <div id="about" class="text-center bg-gradient-to-tl from-red-700 via-rose-500 to-red-700 p-3 rounded-md shadow-md py-16">
+     <h1 class="text-slate-800 text-3xl font-semibold m-auto text-center py-6 ">A little about</h1>
+     <img class="m-auto py-5" src="flesh.png" alt="">
+     <p class='text-slate-50 p-2'>I’m a creative web developer specializing in <br>modern e-commerce designs and seamless user experiences. With expertise in<br> Node.js and a passion for sleek, dynamic interfaces, I deliver innovative <br>solutions that stand out.
+    </p>
+ </div>
+ 
+ 
+ <div id="services" class="m-auto">
+ <h1 class="text-slate-800 text-3xl font-semibold m-auto my-16 text-center py-6" >Amazing Things I Do for Clients</h1>
+  <div class="flex flex-wrap jusftify-center">
+    <div class="bg-gray-50 border-t-4 border-red-500 rounded-lg shadow-lg p-5 w-96 m-2 h-[600px] hover:bg-gray-100 m-auto mb-5">
+      <img src="web-designer.jpg" alt="Web Designer" class="w-full rounded-sm h-80">
+      <h2 class="text-slate-600 p-5 text-center text-2xl font-medium">Web Designer</h2>
+      <p class='text-slate-400 p-2'>
+        I craft visually appealing and user-friendly websites from scratch, focusing on clean and responsive designs tailored to the client's needs.
+      </p>
+    </div>
+   <div class="bg-gray-50 border-t-4 border-red-500 rounded-lg shadow-lg p-5 w-96 m-2 h-[600px] hover:bg-gray-100 m-auto mb-5">
+      <img src="web-devloper.jpg" alt="Website Developer" class="w-full rounded-sm h-80">
+      <h2 class='text-slate-600 p-5 text-center text-2xl font-medium'>Website Developer</h2>
+      <p class='text-slate-400 p-2'>
+        I turn ideas into fully functional websites by writing all the code manually, ensuring seamless functionality and meeting real-world requirements.
+      </p>
+    </div>
+  </div>
+ 
+ <div class="strip"></div>
+
+<section class="projects">
+    <h1 class="text-slate-800 text-3xl font-semibold m-auto my-16 text-center py-6">Recent projects</h1>
+    <div class="flex flex-wrap gap-15">
+        <div class="bg-gray-50 border-t-4 border-red-500 rounded-lg shadow-lg p-5 w-96 m-2 h-[630px] hover:bg-gray-100 m-auto mb-5">
+    <img class="rounded-lg" src="e-commerce.jpg" alt="" class="w-full rounded-sm h-80">
+    <h2 class="text-slate-600 p-5 text-center text-2xl font-medium">E-commerce web</h2>
+    <p class='text-slate-400 p-2'>an electronic website for sporty tees seller, full media responsive, using front end : Html, Css ans Js</p><br>
+   <a href="https://8383ihdhusc.github.io/NASRO/EnterFace.html" class="bg-gray-500 hover:bg-gradient-to-br hover:from-gray-500  hover:via-gray-600 hover:to-gray-500 w-[40%] h[50px] px-5 py-2 text-2xl block rounded-md shadow-md m-auto text-center ">Visite</a>
+        </div>
+        <div class="bg-gray-50 border-t-4 border-red-500 rounded-lg shadow-lg p-5 w-96 m-2 h-[630px] hover:bg-gray-100 m-auto mb-5">
+     <img class="rounded-lg" src="admin-dashboard.jpg" alt="" class="w-full rounded-sm h-80">
+    <h2 class="text-slate-600 p-5 text-center text-2xl font-medium">Admin dash.</h2>
+    <p class='text-slate-400 p-2'>for managing products, cool designed, and perfect responsive for all media, using front end : Html, Css ans Js</p><br><br>
+    <a href="#" class="bg-gray-500 hover:bg-gradient-to-br hover:from-gray-500  hover:via-gray-600 hover:to-gray-500 w-[40%] h[50px] px-5 py-2 text-2xl block rounded-md shadow-md m-auto text-center ">Visite</a>
+        </div>        
+    </div>
+    <p style="color: #ff0034; margin: 20px; text-align: center;font-weight: 500;font-size: 20px">New projects are coming soon❤️...</p>
+</section>
+<div class="strip"></div>
+<section class="bg-gradient-to-br from-red-900 via-rose-900 to-red-950 p-5">
+<h1 class="text-white text-3xl font-semibold m-auto my-16 text-center py-6 pt-6">My Talents</h1>
+<h1 class="text-white text-3xl font-semibold m-auto my-16 text-center py-3 pr-3">-Programing Languages</h1>
+    <div class="flex flex-wrap justify-center bg-gradient-to-br from-red-800 via-rose-800 to-red-800 w-[80%] gap-5 p-5 m-auto py-6 rounded-sm">       
+        <div class="bg-gradient-to-tl from-red-700 via-rose-500 to-red-700 p-3 rounded-md shadow-md">
+            <img src="html.jpg" alt="" class='h-40 w-40 rounded-md'>
+  <h2 class='text-white text-center text-2xl'>HTML</h2>            
+        </div>        
+
+        <div class="bg-gradient-to-tl from-red-700 via-rose-500 to-red-700 p-3 rounded-md shadow-md">
+            <img src="css.jpg" alt="" class='h-40 w-40 rounded-md'>
+  <h2 class='text-white text-center text-2xl'>CSS</h2>                
+        </div>
+        
+        <div class="bg-gradient-to-tl from-red-700 via-rose-500 to-red-700 p-3 rounded-md shadow-md">
+            <img src="js.jpg" alt="" class='h-40 w-40 rounded-md'>
+   <h2 class='text-white text-center text-2xl'>JavaScript</h2>                
+        </div>
+      </div>
+      <h1 class="text-white text-3xl font-semibold m-auto my-16 text-center py-3 pr-3">-Framworks</h1>        
+      <div class="flex flex-wrap justify-center bg-gradient-to-br from-red-800 via-rose-800 to-red-800 w-[80%] gap-5 py-5 m-auto py-6 rounded-sm">
+        <div class="bg-gradient-to-tl from-red-700 via-rose-500 to-red-700 p-3 rounded-md shadow-md">             
+  <img src="tailwind.jpg" alt="" class='h-40 w-40 rounded-md'>       
+  <h2 class='text-white text-center text-2xl'>Tailwind CSS</h2>         
+        </div>
+        <div class="bg-gradient-to-tl from-red-700 via-rose-500 to-red-700 p-3 rounded-md shadow-md">
+            <img src="bootstrap.jpg" alt="" class='h-40 w-40 rounded-md'>
+  <h2 class='text-white text-center text-2xl'>BootsTrap</h2>                
+        </div>
+        
+        <div class="bg-gradient-to-tl from-red-700 via-rose-500 to-red-700 p-3 rounded-md shadow-md">
+            <img src="vuejs.jpg" alt="" class='h-40 w-40 rounded-md'>
+  <h2 class='text-white text-center text-2xl'>Vuejs</h2>                
+        </div>
+        </div>
+    
+</section>
+<div class="strip"></div>
+<section id="blogs" class="blogs">
+    <h1 class="text-slate-800 text-3xl font-semibold m-auto my-16 text-center">My little blogs</h1>
+    <div class="flex flex-wrap">
+        <div class="bg-gray-50 border-t-4 border-red-500 rounded-lg shadow-lg p-5 w-96 m-2 h-[600px] hover:bg-gray-100 m-auto mb-5">
+     <img class="squared-img" src="blog1.jpg" alt="" class="w-full rounded-sm h-80">
+    <h1>1. How to Style Css page</h1>
+    <p class='text-slate-400 p-2'>Many Many of front end developers conforont a big problem, while they create Html and Css<br> -how can i design this button? how can i still this navbar, enter this website too see all kinds of web components.</p>
+     <a href="" class="button">More!</a>
+        </div>
+        <div class="bg-gray-50 border-t-4 border-red-500 rounded-lg shadow-lg p-5 w-96 m-2 h-[600px] hover:bg-gray-100 m-auto mb-5">
+     <img class="squared-img" src="blog2.jpg" alt="" class="w-full rounded-sm h-80">
+    <h1>2. steps before writing code</h1>
+    <p class='text-slate-400 p-2'>Define your goals, sketch layouts, and decide on styles like colors and fonts. Organize assets and visualize your structure. Preparation saves time, prevents confusion, and ensures your code is clean and efficient.
+</p>
+    <a href="" class="button">More!</a>
+        </div>        
+    </div>
+</section>
+<div class="strip"></div>
+<!-- <section class="reviews"></section> -->
+<section class="faq-section">
+  <div id="faq" class="faq flex flex-col items-center w-[60vw] m-auto">
+    <h1 class="text-slate-800 text-3xl font-semibold m-auto my-16 text-center py-6">Frequently Asked Questions (FAQ), General Info</h1>
+    <div class="gap-y-7">
+    <div class="flex items-center">
+      <i class="fas fa-chevron-down cursor-pointer"></i>
+      <h1 class="questions text-slate-600 text-xl font-semibold text-center px-3">Who are you?</h1><br>
+    </div>
+    <p class="hidden text-slate-400 p-2">I'm Youssef Kabiri, a passionate web developer with a focus on creating user-friendly and responsive websites. I specialize in front-end development and enjoy bringing creative ideas to life with code.</p>
+
+    <div class="flex items-center">
+      <i class="fas fa-chevron-down cursor-pointer"></i>
+      <h1 class="questions text-slate-600 text-xl font-semibold text-center px-3">What services do you offer?</h1><br>
+    </div>
+    <p class="hidden text-slate-400 p-2">I offer a range of services including custom web development, website design, UI/UX design, and website maintenance. I also help with troubleshooting and optimization for existing projects.</p>
+
+    <div class="flex items-center">
+      <i class="fas fa-chevron-down cursor-pointer"></i>
+      <h1 class="questions text-slate-600 text-xl font-semibold text-center px-3">Any examples of your work?</h1><br>
+    </div>
+    <p class="hidden text-slate-400 p-2">Yes, my portfolio showcases various projects I've worked on, from personal websites to client-based applications. Feel free to browse through my projects to see the quality of my work.</p>
+
+    <div class="flex items-center">
+      <i class="fas fa-chevron-down cursor-pointer"></i>
+      <h1 class="questions text-slate-600 text-xl font-semibold text-center px-3">What is your availability?</h1><br>
+    </div>
+    <p class="hidden text-slate-400 p-2">I'm currently available for new projects and would be happy to discuss your ideas. I work both part-time and full-time depending on the scope of the project.</p>
+
+    <div class="flex items-center">
+      <i class="fas fa-chevron-down cursor-pointer"></i>
+      <h1 class="questions text-slate-600 text-xl font-semibold text-center px-3">Do you offer revisions or edits?</h1><br>
+    </div>
+    <p class="hidden text-slate-400 p-2">Yes, I include up to three revisions per project to ensure the final product meets your expectations. Additional revisions can be arranged if needed.</p>
+  </div>
+  </div>
+</section>
+<div class="strip"></div>
+ <section class="">
+    <div class="max-w-lg mx-auto p-6 bg-red-50 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold text-red-700 mb-4 text-center py-6">Contact Me</h2>
+    <form action="#" method="POST">
+        <div class="mb-4">
+            <label for="name" class="block text-red-600 font-medium mb-2">Name</label>
+            <input type="text" id="name" name="name" class="w-full p-3 border border-red-300 rounded-md focus:ring-2 focus:ring-red-500 text-black" placeholder="Your Name" required>
+        </div>
+        <div class="mb-4">
+            <label for="email" class="block text-red-600 font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full p-3 border border-red-300 rounded-md focus:ring-2 focus:ring-red-500 text-black" placeholder="Your Email" required>
+        </div>
+        <div class="mb-4">
+            <label for="message" class="block text-red-600 font-medium mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full p-3 border border-red-300 rounded-md focus:ring-2 focus:ring-red-500 text-slate-700" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="w-full p-3 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">Send Message</button>
+    </form>
+</div>
+ </section>
+ <div class="strip"></div>
+<section id="contact" class="contact py-16">
+  <h1 class="text-slate-800 text-3xl font-semibold text-center mb-8">Drop me a line</h1>
+  <div class="flex justify-center space-x-8">
+    <div class="card-info bg-white shadow-lg rounded-lg overflow-hidden p-6 text-center max-w-xs">
+      <img class="img-thumbnail w-24 h-24 object-cover mx-auto rounded-full mb-4" src="adress.jpg" alt="Address">
+      <h2 class="text-xl font-medium text-slate-800">Address</h2>
+      <p class="text-slate-600 mt-2">maroc . khouribga . 1974</p>
+    </div>
+    <div class="card-info bg-white shadow-lg rounded-lg overflow-hidden p-6 text-center max-w-xs">
+      <img class="img-thumbnail w-24 h-24 object-cover mx-auto rounded-full mb-4" src="phone.jpg" alt="Phone">
+      <h2 class="text-xl font-medium text-slate-800">Phone</h2>
+      <p class="text-slate-600 mt-2">+212772538810</p>
+    </div>
+    <div class="card-info bg-white shadow-lg rounded-lg overflow-hidden p-6 text-center max-w-xs">
+      <img class="img-thumbnail w-24 h-24 object-cover mx-auto rounded-full mb-4" src="email.jpg" alt="Email">
+      <h2 class="text-xl font-medium text-slate-800">Email</h2>
+      <p class="text-slate-600 mt-2">achbriti980@gmail.com</p>
+    </div>
+  </div>
+</section>
+<div class="strip"></div>
+<footer class="footer bg-gray-900 text-white relative bottom-0 my-0">
+    <div class="footer-content max-w-7xl mx-auto px-6 py-10">
+        <p class="text-center text-lg font-semibold mb-8">&copy; 2024 Youssef Kabiri. All rights reserved.</p>
+        <div class="social-links flex justify-center space-x-6">
+            <a href="https://linkedin.com/in/your-profile" target="_blank" class="icon hover:text-blue-400 transition">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/your-profile" target="_blank" class="icon hover:text-pink-500 transition">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="https://www.facebook.com/your-profile" target="_blank" class="icon hover:text-blue-600 transition">
+                <i class="fab fa-facebook text-2xl"></i>
+            </a>
+            <a href="https://wa.me/your-phone-number" target="_blank" class="icon hover:text-green-500 transition">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+<script>
+    
+    let humberButton = document.querySelector(".humbergur-menu-parent");
+let MyulList = document.querySelector("ul");
+
+humberButton.addEventListener('click', () => {
+    MyulList.classList.toggle('hidden');
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('humbergur-menu-parent') && !MyulList.classList.contains('hidden')) {
+    MyulList.classList.toggle('hidden');
+  }
+});
+// Select all icons
+  const icons = document.querySelectorAll(".faq-section i");
+
+  icons.forEach((icon, index) => {
+    icon.addEventListener("click", () => {
+      // Select the associated paragraph
+      const paragraph = document.querySelectorAll(".faq-section p")[index];
+      
+      // Toggle visibility of the paragraph
+      paragraph.classList.toggle("hidden");
+    });
+  });
+</script>
+</body>
+</html>
